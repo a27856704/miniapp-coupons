@@ -17,9 +17,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        db.collection('coupons').get().then(res => {
+         db.collection("coupons").where({}).get().then(res => {
             const tabs = res.data
-            console.log(tabs)
+            console.log('测试:'+res)
 
             let all = {
                 title: '全部',
